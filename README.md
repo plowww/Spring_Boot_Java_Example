@@ -9,3 +9,5 @@ to provide authentication (spring.datasource.username and spring.datasource.pass
 
 Database is a simple table of students with ID, Name, Email, and DOB (age is a transient property).
 Student is the main object of the project.
+
+An example HTTP file is created for easy testing of the requests. This is located in src\main\java\com\example\demo\Test-Post.http.
