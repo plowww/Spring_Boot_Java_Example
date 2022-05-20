@@ -1,5 +1,6 @@
 package com.example.demo.student;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,7 +51,7 @@ public class StudentService {
 	// Transactional handles the transaction without us needing
 	// to use a query
 	@Transactional
-	public void updateStudent(Long studentId,String name,String email)
+	public void updateStudent(Long studentId, String name, String email, LocalDate dob)
 	{
 		Student student = studentRepository.findById(studentId)
 			.orElseThrow(() -> new IllegalStateException(
@@ -73,6 +74,12 @@ public class StudentService {
 				!Objects.equals(student.getName(),name)) {
 					student.setName(name);
 				}
+		
+				System.out.println(dob);
+		if (dob != null)
+		{
+			student.setDob(dob);
+		}
 	}
 
 }

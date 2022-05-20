@@ -15,7 +15,14 @@ content-type: application/json
 DELETE http://localhost:8080/api/v1/student/1
 
 ###
-PUT http://localhost:8080/api/v1/student/1?name=Samuel&email=samaaaaaa@gmail.com
+PUT http://localhost:8080/api/v1/student/1
+Content-Type: application/json
+
+{
+        "name": "Samuel",
+        "email": "samaaaaaaa@gmail.com",
+        "dob": "1191-10-11"
+}
 
 ###
 POST http://localhost:8080/api/v1/student
